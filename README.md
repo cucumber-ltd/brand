@@ -1,12 +1,12 @@
 # Cucumber Brand
 
-All Cucumber logos are © Cucumber Limited. 
+All Cucumber logos are © Cucumber Limited.
 
 ## Conversions
 
 Use the following steps when converting images
 
-### svg -> png
+### Create png from svg
 
 * Open SVG in Inkscape
 * Select all
@@ -15,7 +15,7 @@ Use the following steps when converting images
 * Filename: png/[basename].png
 * Export
 
-### pad png
+Now, add padding to the png:
 
 * Open png/[basename].png in Gimp
 * Add padding (See guide)
