@@ -11,15 +11,19 @@ Use the following steps when converting images
 * Open SVG in Inkscape
 * Select all
 * File -> Export Bitmap...
-* Bitmap Size: pixels at 200 dpi
+* Bitmap Size: pixels at 400 dpi
 * Filename: png/[basename].png
 * Export
 
-Now, add padding to the png:
+### TODO: Add padding to the pngs with text
 
 * Open png/[basename].png in Gimp
-* Add padding (See guide)
-* Image -> Canvas size. One edge at a time.
+* Using the mouse, find out approx. width/height (should be the same) of the 'c' in pixels
+* Add padding via Image -> Canvas size.
+  * Width: add 2*n pixels
+  * Height: add 1.5*n pixels
+  * X: n pixels
+  * Y: 0.5n pixels
+  * Press Resize
 * File -> Export As...
-* Filename: png/[basename]-[width]x[height].png
-* Delete png/[basename].png
+* Filename: png/[basename].png
