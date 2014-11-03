@@ -25,5 +25,4 @@ Use the following steps when converting images
   * X: n pixels
   * Y: 0.5n pixels
   * Press Resize
-* File -> Export As...
-* Filename: png/[basename].png
+* File -> Overwrite png/[basename].png
