@@ -15,7 +15,7 @@ Use the following steps when converting images
 * Filename: png/[basename].png
 * Export
 
-### TODO: Add padding to the pngs with text
+### Add padding to the pngs with text
 
 * Open png/[basename].png in Gimp
 * Using the mouse, find out approx. width/height (should be the same) of the 'c' in pixels
