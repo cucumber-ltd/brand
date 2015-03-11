@@ -44,7 +44,7 @@
      fit-margin-right="25"
      fit-margin-bottom="25"
      inkscape:zoom="2.3157894"
-     inkscape:cx="226.98975"
+     inkscape:cx="164.37611"
      inkscape:cy="59.54337"
      inkscape:window-x="41"
      inkscape:window-y="21"
@@ -64,7 +64,9 @@
          sodipodi:role="line"
          id="tspan3421"
          x="193.77274"
-         y="87.606422">specflow</tspan></text>
+         y="87.606422"><tspan
+   style="fill:#65696b;fill-opacity:1"
+   id="tspan4242">spec</tspan>flow</tspan></text>
 <g
        id="g6717"
        transform="translate(386.74717,24.5772)"><g
