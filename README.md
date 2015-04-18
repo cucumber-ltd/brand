@@ -2,6 +2,10 @@
 
 All Cucumber logos are © Cucumber Limited.
 
+The brand guidelines are in [Cucumber_Brand_V1.0.pdf](https://github.com/cucumber-ltd/brand/blob/master/Cucumber_Brand_V1.0.pdf).
+
+Please contact hello@cucumber.pro before you use the logos in your own material.
+
 ## Conversions
 
 Use the following steps when converting images
