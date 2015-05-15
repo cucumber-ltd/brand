@@ -16,7 +16,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="single-source-of-truth.svg">
+   sodipodi:docname="single-source-of-truth.svg"
+   inkscape:export-filename="/Users/aslakhellesoy/git/cucumber/brand/png/single-source-of-truth-512x512.png"
+   inkscape:export-xdpi="112.98"
+   inkscape:export-ydpi="112.98">
   <defs
      id="defs4">
     <path
@@ -48,7 +51,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="397.27171"
+     inkscape:cx="262.7035"
      inkscape:cy="598.41642"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
@@ -66,7 +69,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -91,7 +94,7 @@
        style="opacity:0.5;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle4148"
        cx="402.85712"
-       cy="370.93362"
+       cy="388.93362"
        r="140" />
   </g>
   <g
@@ -113,7 +116,7 @@
      style="display:inline">
     <circle
        r="140"
-       cy="370.93362"
+       cy="388.93362"
        cx="402.85712"
        id="circle4140"
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#1b1d1e;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
@@ -149,7 +152,7 @@
      style="display:inline">
     <g
        id="g4268"
-       transform="matrix(2.6940073,0,0,2.6940073,359.16058,394.15044)">
+       transform="matrix(2.6940073,0,0,2.6940073,359.16058,402.15044)">
       <g
          style="display:inline"
          inkscape:label="bubble"
@@ -192,7 +195,8 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text4315-9"
-       sodipodi:linespacing="125%"><textPath
+       sodipodi:linespacing="125%"
+       transform="translate(0,18)"><textPath
          xlink:href="#path4413"
          id="textPath4538"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;letter-spacing:0px;writing-mode:lr-tb;text-anchor:start">Automated Tests</textPath></text>
