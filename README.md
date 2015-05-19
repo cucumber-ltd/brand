@@ -14,7 +14,7 @@ For any questions, please email hello@cucumber.pro.
 All Cucumber logos are © Cucumber Limited and distributed under the
 [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/) license.
 
-If you wish to use the logos for commercial purposes, please write to hello@cucumber.pro
+If you wish to use the logos for commercial purposes, please write to marketing@cucumber.io
 to get a commercial license.
 
 The brand guidelines are in [Cucumber_Brand_V1.0.pdf](https://github.com/cucumber-ltd/brand/blob/master/Cucumber_Brand_V1.0.pdf).
