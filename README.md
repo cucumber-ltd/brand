@@ -7,14 +7,16 @@ This guide is designed to get you the resources you need and provide simple inst
 permitted and correct use of the Cucumber brand assets, whether you are a marketer branding your
 commercial product or a community ambassador.
 
-For any questions, please email hello@cucumber.pro.
+For any questions, please email marketing@cucumber.io.
 
 ## Copyright & License
 
 All Cucumber logos are © Cucumber Limited and distributed under the
 [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/) license.
+This means you are free to use the graphic material in this repository for non-commercial
+purposes as long as you credit Cucumber Ltd.
 
-If you wish to use the logos for commercial purposes, please write to marketing@cucumber.io
-to get a commercial license.
+If you wish to use the graphic material for commercial purposes, please write to marketing@cucumber.io
+to obtain a commercial license.
 
-The brand guidelines are in [Cucumber_Brand_V1.0.pdf](https://github.com/cucumber-ltd/brand/blob/master/Cucumber_Brand_V1.0.pdf).
+The brand guidelines are in [Cucumber_Brand_V1.0.pdf](https://github.com/cucumber-ltd/brand/blob/master/Cucumber_Brand_V1.0.pdf). Here you will find guidelines of correct use of logos, colours and fonts.
