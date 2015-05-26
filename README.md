@@ -1,28 +1,20 @@
 # Cucumber Brand
 
-All Cucumber logos are © Cucumber Limited.
+We're excited that you want to help promote Cucumber. No matter how you contribute as a developer,
+ecosystem member, or enthusiast, your help spreading the word about Cucumber is extremely valuable.
 
-## Conversions
+This guide is designed to get you the resources you need and provide simple instructions for the
+permitted and correct use of the Cucumber brand assets, whether you are a marketer branding your
+commercial product or a community ambassador.
 
-Use the following steps when converting images
+For any questions, please email hello@cucumber.pro.
 
-### Create png from svg
+## Copyright & License
 
-* Open SVG in Inkscape
-* Select all
-* File -> Export Bitmap...
-* Bitmap Size: pixels at 400 dpi
-* Filename: png/[basename].png
-* Export
+All Cucumber logos are © Cucumber Limited and distributed under the
+[CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/) license.
 
-### Add padding to the pngs with text
+If you wish to use the logos for commercial purposes, please write to hello@cucumber.pro
+to get a commercial license.
 
-* Open png/[basename].png in Gimp
-* Using the mouse, find out approx. width/height (should be the same) of the 'c' in pixels
-* Add padding via Image -> Canvas size.
-  * Width: add 2*n pixels
-  * Height: add 1.5*n pixels
-  * X: n pixels
-  * Y: 0.5n pixels
-  * Press Resize
-* File -> Overwrite png/[basename].png
+The brand guidelines are in [Cucumber_Brand_V1.0.pdf](https://github.com/cucumber-ltd/brand/blob/master/Cucumber_Brand_V1.0.pdf).
