@@ -4,14 +4,17 @@
 #
 set -euf -o pipefail
 
-#declare -A colours=( ["red"]="#ff1245" ["green"]="#00a818" ["purple"]="#3e10af" )
-
+# Primary colours from brand guide
 ARRAY=( "red:#ff1245"
         "green:#00a818"
-        "purple:#3e10af" )
+        "purple:#3e10af"
+        "orange:#ff7f00"
+        "yellow:#ffda00"
+        "black:#1b1d1e"
+      )
 
 for color in "${ARRAY[@]}" ; do
     name="${color%%:*}"
     hex="${color##*:}"
-    printf "%s is %s.\n" "$name" "$hex"
+    sed s/#000000/${hex}/ src/cucumber-mark-bw.svg > build/cucumber-mark-${name}.svg
 done
