@@ -1,0 +1,7 @@
+{
+  "name": "cucumber-brand",
+  "private": true,
+  "devDependencies": {
+    "svgo": "^0.6.6"
+  }
+}
