@@ -3,5 +3,8 @@
   "private": true,
   "devDependencies": {
     "svgo": "^0.6.6"
+  },
+  "scripts": {
+    "build": "svgo --config .svgo.yml src/cucumber-mark-tm.svg"
   }
 }

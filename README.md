@@ -21,3 +21,8 @@ purposes as long as you credit Cucumber Ltd.
 
 If you wish to use the graphic material for commercial purposes, please write to marketing@cucumber.io
 to obtain a commercial license.
+
+## Building logos
+
+    npm install
+    npm run build
