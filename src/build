@@ -4,6 +4,8 @@
 #
 set -euf -o pipefail
 
+# ./node_modules/.bin/svgo --disable=cleanupIDs src/cucumber-mark-tm.svg
+
 # Primary colours from brand guide
 ARRAY=( "red:#ff1245"
         "green:#00a818"
@@ -13,8 +15,12 @@ ARRAY=( "red:#ff1245"
         "black:#1b1d1e"
       )
 
-for color in "${ARRAY[@]}" ; do
-    name="${color%%:*}"
+for svg in $(find src -name "*.svg"); do
+  for color in "${ARRAY[@]}" ; do
+    color_name="${color%%:*}"
     hex="${color##*:}"
-    sed s/#000000/${hex}/ src/cucumber-mark-bw.svg > build/cucumber-mark-${name}.svg
+
+    outsvg=build/$(basename ${svg} .svg)-${color_name}.svg
+    sed s/#000/${hex}/ "${svg}" > "${outsvg}"
+  done
 done
