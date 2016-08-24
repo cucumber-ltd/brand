@@ -8,7 +8,7 @@ insvg=$1
 outdir=$2
 
 # Primary colours from brand guide
-ARRAY=(
+COLORS=(
   "red:#ff1245"
   "green:#00a818"
   "purple:#3e10af"
@@ -17,7 +17,7 @@ ARRAY=(
   "black:#1b1d1e"
 )
 
-for color in "${ARRAY[@]}" ; do
+for color in "${COLORS[@]}" ; do
   color_name="${color%%:*}"
   hex="${color##*:}"
 
