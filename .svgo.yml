@@ -39,3 +39,4 @@ plugins:
   - removeAttrs
   - addClassesToSVGElement
   - removeStyleElement
+  - removeTradeMark

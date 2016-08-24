@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#
+# Build other logos from a common svg source
+#
+set -euf -o pipefail
+
+insvg=$1
+outdir=$2
+
+# Primary colours from brand guide
+ARRAY=(
+  "red:#ff1245"
+  "green:#00a818"
+  "purple:#3e10af"
+  "orange:#ff7f00"
+  "yellow:#ffda00"
+  "black:#1b1d1e"
+)
+
+for color in "${ARRAY[@]}" ; do
+  color_name="${color%%:*}"
+  hex="${color##*:}"
+
+  outsvg=${outdir}/$(basename ${insvg} .svg)-${color_name}.svg
+  sed s/#000/${hex}/ "${insvg}" > "${outsvg}"
+done

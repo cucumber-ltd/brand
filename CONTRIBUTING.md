@@ -1,6 +1,10 @@
 # Contributor Guidelines
 
-All images should have an SVG original and be Inkscape compatible.
+All originals live in `src/tm`. These are the only files that should be edited
+"by hand".
+
+The `src/notm` svgs are generated from `src/tm` using the `src/build-no-tm` script.
+All this script does is to make copies with the `TM` mark removed from the logo. 
 
 ## Conversions
 
