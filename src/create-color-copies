@@ -22,5 +22,5 @@ for color in "${ARRAY[@]}" ; do
   hex="${color##*:}"
 
   outsvg=${outdir}/$(basename ${insvg} .svg)-${color_name}.svg
-  sed s/#000/${hex}/ "${insvg}" > "${outsvg}"
+  sed s/"#000"/"${hex}"/g "${insvg}" > "${outsvg}"
 done

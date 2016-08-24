@@ -1,7 +1,7 @@
 TM_FILES = $(shell find src/tm -type f -name "*.svg")
 NOTM_FILES = $(patsubst src/tm/%.svg,src/notm/%.svg,$(TM_FILES))
 
-colors: notms
+colors: notms ./src/create-color-copies
 	mkdir -p svg/tm
 	./src/create-color-copies src/tm/cucumber-mark.svg svg/tm
 
@@ -11,14 +11,14 @@ colors: notms
 
 notms: $(NOTM_FILES)
 
-src/notm/%.svg: src/tm/%.svg
+src/notm/%.svg: src/tm/%.svg node_modules/svgo/plugins/removeTradeMark.js
 	mkdir -p $$(dirname "$@")
 	./node_modules/.bin/svgo --config .svgo.yml --output "$@" "$<"
 
-node_modules/svgo/plugins/removeTradeMark: src/svgo/plugins/removeTradeMark node_modules
+node_modules/svgo/plugins/removeTradeMark.js: src/svgo/plugins/removeTradeMark.js ./node_modules/.bin/svgo
 	cp $< $@
 
-node_modules: package.json
+./node_modules/.bin/svgo:
 	npm install
 
 clean:
