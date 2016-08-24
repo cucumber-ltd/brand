@@ -1,10 +1,45 @@
 # Contributor Guidelines
 
-All originals live in `src/tm`. These are the only files that should be edited
-"by hand".
+## Originals with ™ symbol
 
-The `src/notm` svgs are generated from `src/tm` using the `src/build-no-tm` script.
-All this script does is to make copies with the `TM` mark removed from the logo. 
+All originals live in `src/tm`. These are the only files that should be edited
+"by hand", typically with Sketch. When you're done editing, clean them up. Example:
+
+    ./node_modules/.bin/svgo src/tm/cucumber-mark.svg
+
+## Generate SVGs
+
+You need Node.js for this, and a Linux or OS X machine.
+
+    make color-svgs
+
+That's it! Take a look in `svg/tm` and `svg/notm`.
+
+## Generate PNGs
+
+You'll need Cairo:
+
+    http://stackoverflow.com/questions/10393675/rsvg-with-python-3-2-on-ubuntu
+    brew install librsvg
+    brew install python3
+    pip3 install cairosvg==2.0.0rc5
+    # If that fails, run `xcode-select --install` and try again
+
+    make color-pngs
+
+## Generate JPGs
+
+You'll need ImageMagick:
+
+    brew install python3
+    pip3 install cairosvg==2.0.0rc5
+
+    make color-pngs
+
+## Temporary conversions
+
+* src/notm
+* build/notm/*-WxH
 
 ## Conversions
 
