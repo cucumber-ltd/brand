@@ -1,67 +1,44 @@
 # Contributor Guidelines
 
-## Originals with ™ symbol
+## Prerequisites
 
-All originals live in `src/tm`. These are the only files that should be edited
-"by hand", typically with Sketch. When you're done editing, clean them up. Example:
+* OS X
+* Fonts
+  * [Roboto](https://fonts.google.com/specimen/Roboto) for the ™ symbol
+  * [Insignia](https://drive.google.com/drive/u/1/folders/0Bz4oWc7BivPTZVNUMjByWVRpbDQ) for the logotype
+* [Sketch](https://www.sketchapp.com/)
+* Node.js
+* librsvg, to create PNGs from SVGs: `brew install librsvg`
+* ImageMagick, to create JPGs from PNGs: `brew install imagemagick`
 
-    ./node_modules/.bin/svgo src/tm/cucumber-mark.svg
+## Editing images (Originals with ™ symbol)
 
-## Generate SVGs
+Don't edit the files under '/images' - they are generated from source SVGs in
+`/src`.
 
-You need Node.js for this, and a Linux or OS X machine.
+These SVG files shouls preferrably be edited with [Sketch](https://www.sketchapp.com/).
+They should all have a ™ symbol in font Roboto
 
+When you're done editing, clean it up:
+
+    ./node_modules/.bin/svgo src/THE-SVG.svg
+
+And finally, hand-edit the SVG to make sure the ™ has an `id` attribute:
+
+```xml
+<text id="™" fill="#000" font-family="Roboto-Regular, Roboto" font-size="NN"><tspan x="..." y="...">™</tspan></text>
+```
+
+The `id="™"` is important, as the build scripts is looking for that when generating logos
+without the ™ symbol.
+
+## Generate SVGs, PNGs and JPGs
+
+Run the following commands, in order.
+
+    make clean
     make color-svgs
+    make pngs
+    make jpgs
 
-That's it! Take a look in `svg/tm` and `svg/notm`.
-
-## Generate PNGs
-
-You'll need Cairo:
-
-    http://stackoverflow.com/questions/10393675/rsvg-with-python-3-2-on-ubuntu
-    brew install librsvg
-    brew install python3
-    pip3 install cairosvg==2.0.0rc5
-    # If that fails, run `xcode-select --install` and try again
-
-    make color-pngs
-
-## Generate JPGs
-
-You'll need ImageMagick:
-
-    brew install python3
-    pip3 install cairosvg==2.0.0rc5
-
-    make color-pngs
-
-## Temporary conversions
-
-* src/notm
-* build/notm/*-WxH
-
-## Conversions
-
-Use the following steps when converting SVGs to raster images.
-
-### Create png from svg
-
-* Open SVG in Inkscape
-* Select all
-* File -> Export Bitmap...
-* Bitmap Size: pixels at 400 dpi
-* Filename: png/[basename].png
-* Export
-
-### Add padding to the pngs with text
-
-* Open png/[basename].png in Gimp
-* Using the mouse, find out approx. width/height (should be the same) of the 'c' in pixels
-* Add padding via Image -> Canvas size.
-  * Width: add 2*n pixels
-  * Height: add 1.5*n pixels
-  * X: n pixels
-  * Y: 0.5n pixels
-  * Press Resize
-* File -> Overwrite png/[basename].png
+That's it! You should now have a lot of images in the `images/**` folders.
