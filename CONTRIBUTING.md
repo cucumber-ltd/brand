@@ -19,6 +19,8 @@ Don't edit the files under '/images' - they are generated from source SVGs in
 These SVG files shouls preferrably be edited with [Sketch](https://www.sketchapp.com/).
 They should all have a ™ symbol unsing the `Roboto` font.
 
+Text such as `cucumber` and `cukeup` should *always* be in lower case (No, `CukeUp` is not ok).
+
 When you're done editing, clean it up:
 
     ./node_modules/.bin/svgo src/THE-SVG.svg
