@@ -25,8 +25,8 @@ color-svgs: $(NOTM_SRC_SVGS) ./scripts/create-color-copies
 	./scripts/create-color-copies src/cucumber-mark.svg          images/svg/tm
 	./scripts/create-color-copies src/tmp/notm/cucumber-mark.svg images/svg/notm
 
-	./scripts/create-color-copies src/cucumber.svg          images/svg/tm   green,black
-	./scripts/create-color-copies src/tmp/notm/cucumber.svg images/svg/notm green,black
+	./scripts/create-color-copies src/cucumber.svg          images/svg/tm   black
+	./scripts/create-color-copies src/tmp/notm/cucumber.svg images/svg/notm black
 .PHONY: colors
 
 src/tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js .svgo.yml

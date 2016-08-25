@@ -17,7 +17,7 @@ Don't edit the files under '/images' - they are generated from source SVGs in
 `/src`.
 
 These SVG files shouls preferrably be edited with [Sketch](https://www.sketchapp.com/).
-They should all have a ™ symbol in font Roboto
+They should all have a ™ symbol unsing the `Roboto` font.
 
 When you're done editing, clean it up:
 
@@ -26,6 +26,8 @@ When you're done editing, clean it up:
 And finally, hand-edit the `<text>` element in the SVG that has the `™` symbol:
 * Add `id="™"` so that the build scripts can generate `™`-less logos
 * Modify `font-family="Roboto"` (Sketch might make it `font-family="Roboto-Regular, Roboto"`, which doesn't work with `rsvg-convert`)
+* Make sure all colours are in the official palette (see `/Cucumber_Branc_V1.0.pdf`)
+* The *variable* colours (which we'll generate into red,green,purple,orange,yellow,black) should be `#000`
 
 For example:
 
