@@ -23,22 +23,18 @@ When you're done editing, clean it up:
 
     ./node_modules/.bin/svgo src/THE-SVG.svg
 
-And finally, hand-edit the SVG to make sure the ™ has an `id` attribute:
+And finally, hand-edit the `<text>` element in the SVG that has the `™` symbol:
+* Add `id="™"` so that the build scripts can generate `™`-less logos
+* Modify `font-family="Roboto"` (Sketch might make it `font-family="Roboto-Regular, Roboto"`, which doesn't work with `rsvg-convert`)
+
+For example:
 
 ```xml
-<text id="™" fill="#000" font-family="Roboto-Regular, Roboto" font-size="NN"><tspan x="..." y="...">™</tspan></text>
+<text id="™" fill="#000" font-family="Roboto" font-size="NN"><tspan x="..." y="...">™</tspan></text>
 ```
-
-The `id="™"` is important, as the build scripts is looking for that when generating logos
-without the ™ symbol.
 
 ## Generate SVGs, PNGs and JPGs
 
-Run the following commands, in order.
-
-    make clean
-    make color-svgs
-    make pngs
-    make jpgs
+    ./scripts/make
 
 That's it! You should now have a lot of images in the `images/**` folders.

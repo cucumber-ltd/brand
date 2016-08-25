@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euf -o pipefail
+
+make clean
+make color-svgs
+make pngs
+make jpgs

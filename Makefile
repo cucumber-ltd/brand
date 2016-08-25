@@ -14,7 +14,7 @@ images/jpg/%.jpg: images/png/%.png
 	mkdir -p $$(dirname "$@")
 	convert -background white -flatten $< $@
 
-images/png/%: images/svg/*/*.svg
+images/png/%: images/svg/%.svg
 	@mkdir -p $@
 	./scripts/create-scaled-pngs $< $@
 
