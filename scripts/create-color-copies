@@ -6,7 +6,7 @@ set -euf -o pipefail
 
 insvg=$1
 outdir=$2
-IFS=', ' read -r -a colors_to_use_array <<< "${3:-red,green,purple,orange,yellow,black}"
+IFS=',' read -r -a colors_to_use_array <<< "${3}"
 
 # Primary colours from brand guide
 COLORS=(
@@ -16,6 +16,7 @@ COLORS=(
   "orange:#ff7f00"
   "yellow:#ffda00"
   "black:#1b1d1e"
+  "white:#ffffff"
 )
 
 for color in "${COLORS[@]}" ; do

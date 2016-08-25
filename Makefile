@@ -22,11 +22,14 @@ color-svgs: $(NOTM_SRC_SVGS) ./scripts/create-color-copies
 	mkdir -p images/svg/tm
 	mkdir -p images/svg/notm
 
-	./scripts/create-color-copies src/cucumber-mark.svg          images/svg/tm
-	./scripts/create-color-copies src/tmp/notm/cucumber-mark.svg images/svg/notm
+	./scripts/create-color-copies src/cucumber-mark.svg          images/svg/tm    red,green,purple,orange,yellow,black
+	./scripts/create-color-copies src/tmp/notm/cucumber-mark.svg images/svg/notm  red,green,purple,orange,yellow,black
 
-	./scripts/create-color-copies src/cucumber.svg          images/svg/tm   black
-	./scripts/create-color-copies src/tmp/notm/cucumber.svg images/svg/notm black
+	./scripts/create-color-copies src/cucumber.svg               images/svg/tm   black,white
+	./scripts/create-color-copies src/tmp/notm/cucumber.svg      images/svg/notm black,white
+
+	./scripts/create-color-copies src/cucumber-mark-green-pips.svg               images/svg/tm   white
+	./scripts/create-color-copies src/tmp/notm/cucumber-mark-green-pips.svg      images/svg/notm white
 .PHONY: colors
 
 src/tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js .svgo.yml
