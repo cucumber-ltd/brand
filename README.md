@@ -8,7 +8,7 @@ is designed to get you the resources you need and provide simple instructions fo
 permitted and correct use of the Cucumber brand assets, whether you are a marketer branding your
 commercial product or a community ambassador.
 
-Original logos live in the `svg` directory and rasterised images in the `png` directory.
+Under the `/images` directory you will find logos in SVG, PNG and PDF format.
 
 For any questions, please email marketing@cucumber.io.
 
@@ -21,8 +21,3 @@ purposes as long as you credit Cucumber Ltd.
 
 If you wish to use the graphic material for commercial purposes, please write to marketing@cucumber.io
 to obtain a commercial license.
-
-## Building logos
-
-    npm install
-    npm run build
