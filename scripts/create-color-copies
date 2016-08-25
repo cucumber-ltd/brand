@@ -6,6 +6,7 @@ set -euf -o pipefail
 
 insvg=$1
 outdir=$2
+IFS=', ' read -r -a colors_to_use_array <<< "${3:-red,green,purple,orange,yellow,black}"
 
 # Primary colours from brand guide
 COLORS=(
@@ -21,6 +22,10 @@ for color in "${COLORS[@]}" ; do
   color_name="${color%%:*}"
   hex="${color##*:}"
 
-  outsvg=${outdir}/$(basename ${insvg} .svg)-${color_name}.svg
-  sed s/"#000"/"${hex}"/g "${insvg}" > "${outsvg}"
+  for color_to_use in "${colors_to_use_array[@]}" ; do
+    if [ "$color_name" = "$color_to_use" ] ; then
+      outsvg=${outdir}/$(basename ${insvg} .svg)-${color_name}.svg
+      sed s/"#000"/"${hex}"/g "${insvg}" > "${outsvg}"
+    fi
+  done
 done
