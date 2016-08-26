@@ -31,8 +31,11 @@ color-svgs: $(NOTM_SRC_SVGS) ./scripts/create-color-copies
 	./scripts/create-color-copies src/cucumber-school.svg               images/svg/tm   black,white
 	./scripts/create-color-copies src/tmp/notm/cucumber-school.svg      images/svg/notm black,white
 
-	./scripts/create-color-copies src/cucumber-mark-green-pips.svg               images/svg/tm   white
-	./scripts/create-color-copies src/tmp/notm/cucumber-mark-green-pips.svg      images/svg/notm white
+	./scripts/create-color-copies src/cukeup.svg               images/svg/tm   black,white
+	./scripts/create-color-copies src/tmp/notm/cukeup.svg      images/svg/notm black,white
+
+	./scripts/create-color-copies src/cucumber-mark-transparent-pips.svg               images/svg/tm   black,white
+	./scripts/create-color-copies src/tmp/notm/cucumber-mark-transparent-pips.svg      images/svg/notm black,white
 .PHONY: colors
 
 src/tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js node_modules/svgo/plugins/removeWhitespaceText.js .svgo.yml
@@ -49,7 +52,7 @@ node_modules/svgo/plugins/removeWhitespaceText.js: scripts/svgo/plugins/removeWh
 	npm install
 
 clean:
-	rm -Rf src/tmp src/tm src/notm images
+	rm -Rf src/tmp images
 .PHONY: clean
 
 clobber: clean

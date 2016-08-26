@@ -8,10 +8,17 @@ is designed to get you the resources you need and provide simple instructions fo
 permitted and correct use of the Cucumber brand assets, whether you are a marketer branding your
 commercial product or a community ambassador.
 
-Under the `/images` directory you will find logos in SVG, PNG and PDF format.
-You will find versions both with and without the `™` symbol, but you should
-only use the `™` symbol ones. (The non-`™` ones are reserved for exclusive usage by
-Cucumber Limited).
+Under the [`/images`](https://github.com/cucumber-ltd/brand/tree/master/images)
+directory you will find hundreds of logos with the following variations:
+
+* The logo itself
+* Format (SVG, PNG and JPG)
+* Size (16, 32, 64, 128, 256 and 512 pixels for raster images)
+* Colours
+* With and without the `™` symbol
+
+You should only use the `™` symbol ones. (The non-`™` ones are reserved for
+exclusive usage by Cucumber Limited).
 
 For any questions, please email marketing@cucumber.io.
 
