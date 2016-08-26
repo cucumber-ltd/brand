@@ -1,15 +1,18 @@
 'use strict';
 
 exports.type = 'perItem';
-exports.active = true;
-exports.description = 'removes id="™" elements';
-exports.params = {
-    text: true,
-    tspan: true,
-    tref: true
-};
+exports.active = false;
+exports.description = 'removes ™ text and empty text';
 
 exports.fn = function(item, params) {
-  const tm = item.attr("id") && item.attr("id").value == "™"
-  return !tm
+  if (item.isElem('tspan')) {
+    if(
+      item.content &&
+      item.content[0] &&
+      item.content[0].text == "™"
+    ) {
+      return false
+    }
+  }
+  return true
 };

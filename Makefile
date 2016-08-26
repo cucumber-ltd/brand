@@ -35,11 +35,14 @@ color-svgs: $(NOTM_SRC_SVGS) ./scripts/create-color-copies
 	./scripts/create-color-copies src/tmp/notm/cucumber-mark-green-pips.svg      images/svg/notm white
 .PHONY: colors
 
-src/tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js .svgo.yml
+src/tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js node_modules/svgo/plugins/removeWhitespaceText.js .svgo.yml
 	mkdir -p $$(dirname "$@")
-	./node_modules/.bin/svgo --config .svgo.yml --output "$@" "$<"
+	./node_modules/.bin/svgo --config .svgo.yml --enable removeTradeMark --enable removeWhitespaceText --pretty --output "$@" "$<"
 
 node_modules/svgo/plugins/removeTradeMark.js: scripts/svgo/plugins/removeTradeMark.js ./node_modules/.bin/svgo
+	cp $< $@
+
+node_modules/svgo/plugins/removeWhitespaceText.js: scripts/svgo/plugins/removeWhitespaceText.js ./node_modules/.bin/svgo
 	cp $< $@
 
 ./node_modules/.bin/svgo:

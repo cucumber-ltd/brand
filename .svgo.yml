@@ -1,5 +1,7 @@
 full: true
 plugins:
+  - removeTradeMark: false
+  - removeWhitespaceText: false
   - removeDoctype
   - removeXMLProcInst
   - removeComments
@@ -8,7 +10,7 @@ plugins:
   - cleanupAttrs
   - minifyStyles
   - convertStyleToAttrs
-  - cleanupIDs: false
+  - cleanupIDs
   - removeRasterImages
   - removeUselessDefs
   - cleanupNumericValues
@@ -39,4 +41,3 @@ plugins:
   - removeAttrs
   - addClassesToSVGElement
   - removeStyleElement
-  - removeTradeMark

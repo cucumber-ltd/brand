@@ -23,15 +23,7 @@ Text such as `cucumber` and `cukeup` should *always* be in lower case (No, `Cuke
 
 When you're done editing, clean it up:
 
-    ./node_modules/.bin/svgo src/THE-SVG.svg
-
-Hand-edit the `<text>` element in the SVG that has the `™` symbol by adding an `id="™"` so that the build scripts can generate `™`-less logos.
-
-For example:
-
-```xml
-<text id="™" fill="#000" font-family="Roboto" font-size="NN"><tspan x="..." y="...">™</tspan></text>
-```
+    ./node_modules/.bin/svgo --pretty src/THE-SVG.svg
 
 Modify fonts:
 
