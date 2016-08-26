@@ -11,11 +11,11 @@ commercial product or a community ambassador.
 Under the [`/images`](https://github.com/cucumber-ltd/brand/tree/master/images)
 directory you will find hundreds of logos with the following variations:
 
-* The logo itself
 * Format (SVG, PNG and JPG)
-* Size (16, 32, 64, 128, 256 and 512 pixels for raster images)
-* Colours
 * With and without the `™` symbol
+* The logo itself
+* Colours
+* Size (16, 32, 64, 128, 256 and 512 pixels for raster images)
 
 You should only use the `™` symbol ones. (The non-`™` ones are reserved for
 exclusive usage by Cucumber Limited).
