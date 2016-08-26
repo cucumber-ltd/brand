@@ -25,11 +25,7 @@ When you're done editing, clean it up:
 
     ./node_modules/.bin/svgo src/THE-SVG.svg
 
-And finally, hand-edit the `<text>` element in the SVG that has the `™` symbol:
-* Add `id="™"` so that the build scripts can generate `™`-less logos
-* Modify `font-family="Roboto"` (Sketch might make it `font-family="Roboto-Regular, Roboto"`, which doesn't work with `rsvg-convert`)
-* Make sure all colours are in the official palette (see `/Cucumber_Branc_V1.0.pdf`)
-* The *variable* colours (which we'll generate into red,green,purple,orange,yellow,black) should be `#000`
+Hand-edit the `<text>` element in the SVG that has the `™` symbol by adding an `id="™"` so that the build scripts can generate `™`-less logos.
 
 For example:
 
@@ -37,8 +33,26 @@ For example:
 <text id="™" fill="#000" font-family="Roboto" font-size="NN"><tspan x="..." y="...">™</tspan></text>
 ```
 
+Modify fonts:
+
+* Change `font-family="Roboto-Regular, Roboto"` to `font-family="Roboto"`
+* Change `font-family="InsigniaLTStd, Insignia LT Std"` to `font-family="Insignia LT Std"`
+
+(Sketch sets `font-family`, which doesn't work with `rsvg-convert` until the part before the comma is removed).
+
+Verify colours:
+
+* Make sure all colours are in the official palette (see `/Cucumber_Branc_V1.0.pdf`)
+* The *variable* colours (which we'll generate into red,green,purple,orange,yellow,black) should be `#000`
+
 ## Generate SVGs, PNGs and JPGs
 
     ./scripts/make
 
 That's it! You should now have a lot of images in the `images/**` folders.
+
+## TODO
+
+* Add the Insignia font to git
+* Write SVGO plugins for the TM id, font correction and verifying colours
+* Improve Makefile so it doesn't rebuild everything every time

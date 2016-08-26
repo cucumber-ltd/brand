@@ -28,6 +28,9 @@ color-svgs: $(NOTM_SRC_SVGS) ./scripts/create-color-copies
 	./scripts/create-color-copies src/cucumber.svg               images/svg/tm   black,white
 	./scripts/create-color-copies src/tmp/notm/cucumber.svg      images/svg/notm black,white
 
+	./scripts/create-color-copies src/cucumber-school.svg               images/svg/tm   black,white
+	./scripts/create-color-copies src/tmp/notm/cucumber-school.svg      images/svg/notm black,white
+
 	./scripts/create-color-copies src/cucumber-mark-green-pips.svg               images/svg/tm   white
 	./scripts/create-color-copies src/tmp/notm/cucumber-mark-green-pips.svg      images/svg/notm white
 .PHONY: colors
