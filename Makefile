@@ -31,6 +31,9 @@ color-svgs: $(NOTM_SRC_SVGS) ./scripts/create-color-copies
 	./scripts/create-color-copies src/cucumber-school.svg               images/svg/tm   black,white
 	./scripts/create-color-copies src/tmp/notm/cucumber-school.svg      images/svg/notm black,white
 
+	./scripts/create-color-copies src/cucumber-pro.svg               images/svg/tm   black,white
+	./scripts/create-color-copies src/tmp/notm/cucumber-pro.svg      images/svg/notm black,white
+
 	./scripts/create-color-copies src/cukeup.svg               images/svg/tm   black,white
 	./scripts/create-color-copies src/tmp/notm/cukeup.svg      images/svg/notm black,white
 
