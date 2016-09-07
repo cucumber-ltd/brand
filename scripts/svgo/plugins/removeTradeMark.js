@@ -1,8 +1,6 @@
-'use strict';
-
-exports.type = 'perItem';
-exports.active = false;
-exports.description = 'removes ™ text and empty text';
+exports.type = 'perItem'
+exports.active = false
+exports.description = 'removes ™ text and empty text'
 
 exports.fn = function(item, params) {
   if (item.isElem('tspan')) {
@@ -15,4 +13,4 @@ exports.fn = function(item, params) {
     }
   }
   return true
-};
+}

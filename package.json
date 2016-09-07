@@ -2,6 +2,7 @@
   "name": "cucumber-brand",
   "private": true,
   "devDependencies": {
+    "opentype.js": "^0.6.4",
     "svgo": "^0.6.6"
   },
   "scripts": {

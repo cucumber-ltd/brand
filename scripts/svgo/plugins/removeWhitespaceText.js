@@ -1,8 +1,6 @@
-'use strict';
-
-exports.type = 'perItem';
-exports.active = false;
-exports.description = 'removes <text> nodes with only whitespace';
+exports.type = 'perItem'
+exports.active = false
+exports.description = 'removes <text> nodes with only whitespace'
 
 exports.fn = function(item, params) {
   if (item.isElem('text')) {

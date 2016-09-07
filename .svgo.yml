@@ -2,6 +2,7 @@ full: true
 plugins:
   - removeTradeMark: false
   - removeWhitespaceText: false
+  - replaceTextWithPath: false
   - removeDoctype
   - removeXMLProcInst
   - removeComments

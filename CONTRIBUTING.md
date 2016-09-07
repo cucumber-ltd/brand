@@ -3,9 +3,6 @@
 ## Prerequisites
 
 * OS X
-* Fonts
-  * [Roboto](https://fonts.google.com/specimen/Roboto) for the ™ symbol
-  * [Insignia](https://drive.google.com/drive/u/1/folders/0Bz4oWc7BivPTZVNUMjByWVRpbDQ) for the logotype
 * [Sketch](https://www.sketchapp.com/)
 * Node.js
 * librsvg, to create PNGs from SVGs: `brew install librsvg`
@@ -25,13 +22,6 @@ When you're done editing, clean it up:
 
     ./node_modules/.bin/svgo --pretty src/THE-SVG.svg
 
-Modify fonts:
-
-* Change `font-family="Roboto-Regular, Roboto"` to `font-family="Roboto"`
-* Change `font-family="InsigniaLTStd, Insignia LT Std"` to `font-family="Insignia LT Std"`
-
-(Sketch sets `font-family`, which doesn't work with `rsvg-convert` until the part before the comma is removed).
-
 Verify colours:
 
 * Make sure all colours are in the official palette (see `/Cucumber_Branc_V1.0.pdf`)
@@ -43,8 +33,5 @@ Verify colours:
 
 That's it! You should now have a lot of images in the `images/**` folders.
 
-## TODO
-
-* Add the Insignia font to git
-* Write SVGO plugins for the TM id, font correction and verifying colours
-* Improve Makefile so it doesn't rebuild everything every time
+The text in the generated SVG files should have been converted to paths, so that they
+can be used without the Insignia and Roboto fonts installed.
