@@ -6,10 +6,11 @@ set -euf -o pipefail
 
 svg=$1
 dir=$2
+format=$3
 
 heights=( 16 32 64 128 256 512)
 for height in "${heights[@]}"
 do
-  png=${dir}/$(basename ${dir})-${height}.png
-  rsvg-convert --keep-aspect-ratio --height ${height} --format png --output ${png} ${svg}
+  path=${dir}/$(basename ${dir})-${height}.${format}
+  rsvg-convert --keep-aspect-ratio --height ${height} --format ${format} --output ${path} ${svg}
 done

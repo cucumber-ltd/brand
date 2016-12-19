@@ -3,13 +3,17 @@ NOFONT_NOTM_SVGS = $(patsubst src/%.svg,src/tmp/notm/%.svg,$(SRC_SVGS))
 NOFONT_TM_SVGS   = $(patsubst src/%.svg,src/tmp/tm/%.svg,$(SRC_SVGS))
 
 SVGS             = $(wildcard images/svg/*/*.svg)
+PDF_DIRS         = $(patsubst images/svg/%.svg,images/pdf/%,$(SVGS))
+PDFS             = $(wildcard images/pdf/*/*/*.pdf)
 PNG_DIRS         = $(patsubst images/svg/%.svg,images/png/%,$(SVGS))
 PNGS             = $(wildcard images/png/*/*/*.png)
 JPGS             = $(patsubst images/png/%.png,images/jpg/%.jpg,$(PNGS))
 
-jpgs: $(JPGS)
+pdfs: $(PDF_DIRS)
 
 pngs: $(PNG_DIRS)
+
+jpgs: $(JPGS)
 
 images/jpg/%.jpg: images/png/%.png
 	mkdir -p $$(dirname "$@")
@@ -17,7 +21,11 @@ images/jpg/%.jpg: images/png/%.png
 
 images/png/%: images/svg/%.svg
 	@mkdir -p $@
-	./scripts/create-scaled-pngs $< $@
+	./scripts/rsvg-convert-dir $< $@ png
+
+images/pdf/%: images/svg/%.svg
+	@mkdir -p $@
+	./scripts/rsvg-convert-dir $< $@ pdf
 
 color-svgs: $(NOFONT_NOTM_SVGS) $(NOFONT_TM_SVGS) ./scripts/create-color-copies
 	mkdir -p images/svg/tm

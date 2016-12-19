@@ -2,5 +2,6 @@
 set -euf -o pipefail
 
 make color-svgs
+make pdfs
 make pngs
 make jpgs
