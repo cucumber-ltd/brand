@@ -12,12 +12,12 @@ Under the [`/images`](https://github.com/cucumber-ltd/brand/tree/master/images)
 directory you will find hundreds of logos with the following variations:
 
 * Format (SVG, PNG and JPG)
-* With and without the `™` symbol
+* With and without the `®` symbol
 * The logo itself
 * Colours
 * Size (16, 32, 64, 128, 256 and 512 pixels for raster images)
 
-You should only use the `™` symbol ones. (The non-`™` ones are reserved for
+You should only use the `®` symbol ones. (The non-`®` ones are reserved for
 exclusive usage by Cucumber Limited).
 
 For any questions, please email marketing@cucumber.io.
