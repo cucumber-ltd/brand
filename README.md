@@ -1,5 +1,8 @@
 # Cucumber Brand
 
+![cucumber-black](images/png/tm/cucumber-black/cucumber-black-128.png)
+![cucumber-mark-green](images/png/tm/cucumber-mark-green/cucumber-mark-green-128.png)
+
 We're excited that you want to help promote Cucumber. No matter how you contribute as a developer,
 ecosystem member, or enthusiast, your help spreading the word about Cucumber is extremely valuable.
 
