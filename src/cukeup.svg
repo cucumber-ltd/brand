@@ -1,7 +1,4 @@
 <svg width="254" height="104" viewBox="0 0 254 104" xmlns="http://www.w3.org/2000/svg">
-    <title>
-        Slice 1
-    </title>
     <g fill="none" fill-rule="evenodd">
         <path d="M0 0h254v104H0z"/>
         <path d="M220.192 14.82c-9.05 0-16.375 7.324-16.375 16.375 0 7.968 5.712 14.589 13.25 16.062v4.688c9.8-1.478 18.478-9.257 19.125-19.47.39-6.146-2.675-12.42-7.844-15.468a13.755 13.755 0 0 0-.906-.5c-.315-.155-.64-.306-.969-.437-.104-.044-.207-.084-.312-.125-.288-.107-.578-.226-.875-.313a16.246 16.246 0 0 0-5.094-.812z" fill="#00A818"/>
@@ -9,7 +6,7 @@
         <text fill="#000" font-family="InsigniaLTStd, Insignia LT Std" font-size="50">
             <tspan x="22.725" y="76.5">cukeup!</tspan>
         </text>
-        <text fill="#00A818" font-family="Roboto-Regular, Roboto" font-size="5.8">
+        <text fill="#00A818" font-family="Roboto-Regular, Roboto" font-size="5.7">
             <tspan x="231.9" y="18.98">®</tspan>
         </text>
     </g>
