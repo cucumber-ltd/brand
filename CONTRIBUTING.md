@@ -15,7 +15,7 @@ Don't edit the files under '/images' - they are generated from source SVGs in
 `/src`.
 
 These SVG files should preferrably be edited with [Sketch](https://www.sketchapp.com/).
-They should all have a ® symbol unsing the `Roboto` font.
+They should all have a ® symbol using the `Roboto` font.
 
 The outer circle of the ® should fit exactly inside a pip. It should be aligned top and right
 with the cucumber mark logo.
