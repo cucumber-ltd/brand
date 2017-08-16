@@ -1,6 +1,6 @@
 SRC_SVGS         = $(wildcard src/*.svg)
-NOFONT_NOTM_SVGS = $(patsubst src/%.svg,src/tmp/notm/%.svg,$(SRC_SVGS))
-NOFONT_TM_SVGS   = $(patsubst src/%.svg,src/tmp/tm/%.svg,$(SRC_SVGS))
+NOFONT_NOTM_SVGS = $(patsubst src/%.svg,tmp/notm/%.svg,$(SRC_SVGS))
+NOFONT_TM_SVGS   = $(patsubst src/%.svg,tmp/tm/%.svg,$(SRC_SVGS))
 
 SVGS             = $(wildcard images/svg/*/*.svg)
 PDF_DIRS         = $(patsubst images/svg/%.svg,images/pdf/%,$(SVGS))
@@ -31,36 +31,36 @@ color-svgs: $(NOFONT_NOTM_SVGS) $(NOFONT_TM_SVGS) ./scripts/create-color-copies
 	mkdir -p images/svg/tm
 	mkdir -p images/svg/notm
 
-	./scripts/create-color-copies src/tmp/tm/cucumber-mark.svg   images/svg/tm    red,green,purple,orange,yellow,black,grey
-	./scripts/create-color-copies src/tmp/notm/cucumber-mark.svg images/svg/notm  red,green,purple,orange,yellow,black,grey
+	./scripts/create-color-copies tmp/tm/cucumber-mark.svg   images/svg/tm    red,green,purple,orange,yellow,black,grey
+	./scripts/create-color-copies tmp/notm/cucumber-mark.svg images/svg/notm  red,green,purple,orange,yellow,black,grey
 
-	./scripts/create-color-copies src/tmp/tm/cucumber.svg        images/svg/tm   black,white
-	./scripts/create-color-copies src/tmp/notm/cucumber.svg      images/svg/notm black,white
+	./scripts/create-color-copies tmp/tm/cucumber.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/cucumber.svg      images/svg/notm black,white
 
-	./scripts/create-color-copies src/tmp/tm/cucumber-school.svg        images/svg/tm   black,white
-	./scripts/create-color-copies src/tmp/notm/cucumber-school.svg      images/svg/notm black,white
+	./scripts/create-color-copies tmp/tm/cucumber-school.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/cucumber-school.svg      images/svg/notm black,white
 
-	./scripts/create-color-copies src/tmp/tm/cucumber-pro.svg        images/svg/tm   black,white
-	./scripts/create-color-copies src/tmp/notm/cucumber-pro.svg      images/svg/notm black,white
+	./scripts/create-color-copies tmp/tm/cucumber-pro.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/cucumber-pro.svg      images/svg/notm black,white
 
-	./scripts/create-color-copies src/tmp/tm/cucumber-ltd.svg        images/svg/tm   black,white
-	./scripts/create-color-copies src/tmp/notm/cucumber-ltd.svg      images/svg/notm black,white
+	./scripts/create-color-copies tmp/tm/cucumber-ltd.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/cucumber-ltd.svg      images/svg/notm black,white
 
-	./scripts/create-color-copies src/tmp/tm/cukeup.svg        images/svg/tm   black,white
-	./scripts/create-color-copies src/tmp/notm/cukeup.svg      images/svg/notm black,white
+	./scripts/create-color-copies tmp/tm/cukeup.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/cukeup.svg      images/svg/notm black,white
 
-	./scripts/create-color-copies src/tmp/tm/cucumber-mark-transparent-pips.svg        images/svg/tm   black,white
-	./scripts/create-color-copies src/tmp/notm/cucumber-mark-transparent-pips.svg      images/svg/notm black,white
+	./scripts/create-color-copies tmp/tm/cucumber-mark-transparent-pips.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/cucumber-mark-transparent-pips.svg      images/svg/notm black,white
 .PHONY: colors
 
-src/tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/replaceTextWithPath.js .svgo.yml
+tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/replaceTextWithPath.js .svgo.yml
 	mkdir -p $$(dirname "$@")
 	./node_modules/.bin/svgo --config .svgo.yml --enable removeTradeMark      --pretty --output "$@.notm" "$<"
 	./node_modules/.bin/svgo --config .svgo.yml --enable removeWhitespaceText --pretty --output "$@.notm.nowhitespace" "$@.notm"
 	./node_modules/.bin/svgo --config .svgo.yml --enable replaceTextWithPath  --pretty --output "$@" "$@.notm.nowhitespace"
 	rm -rf "$@.notm.nowhitespace" "$@.notm"
 
-src/tmp/tm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/replaceTextWithPath.js .svgo.yml
+tmp/tm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/replaceTextWithPath.js .svgo.yml
 	mkdir -p $$(dirname "$@")
 	./node_modules/.bin/svgo --config .svgo.yml --enable replaceTextWithPath --pretty --output "$@" "$<"
 
@@ -77,7 +77,7 @@ node_modules/svgo/plugins/replaceTextWithPath.js: scripts/svgo/plugins/replaceTe
 	npm install
 
 clean:
-	rm -Rf src/tmp images
+	rm -Rf tmp images
 .PHONY: clean
 
 clobber: clean

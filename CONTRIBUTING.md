@@ -9,32 +9,57 @@
 * ImageMagick, to create JPGs from PNGs: `brew install imagemagick`
 * Roboto and Insignia fonts installed - see the `fonts` directory
 
-## Editing images (Originals with ® symbol)
+## Image sources
 
-Don't edit the files under '/images' - they are generated from source SVGs in
-`/src`.
+Image sources are SVG files under `/src`.
 
-These SVG files should preferrably be edited with [Sketch](https://www.sketchapp.com/).
-They should all have a ® symbol using the `Roboto` font.
+All of the images under `/images` are generated from `/src`. Do not manually add or modify
+any files under `/images`.
+
+SVG files under `/src` should preferably be edited with [Sketch](https://www.sketchapp.com/).
+
+## The ® symbol
+
+All `/src` logos should have a ® symbol (in the `Roboto` font) next to the Cucumber logo.
+There will be generated logos under `/images` with and without the ® symbol.
 
 The outer circle of the ® should fit exactly inside a pip. It should be aligned top and right
 with the cucumber mark logo.
 
+## Text colour
+
+Text to the left of the logo should always be `#000` in `/src` images.
+Text to the right of the logo (if any) should always be the same colour as the logo.
+
+## lower case
+
 Text such as `cucumber` and `cukeup` should *always* be in lower case (No, `CukeUp` is not ok).
 
-Export it as SVG by selecting the topmost element and choose `File -> Export -> Export Canvas`
+### Adding/editing images
+
+If you're adding a new logo, start by making a copy of an existing one from `/src`.
+
+When you're done editing, adjust the width of the entire SVG by dragging the left
+(and right) edges of the logo text. The padding should be the width of a 'c' (see `/Cucumber_Brand_V1.0.pdf`).
+
+Export it as SVG by selecting the topmost element and choose `File -> Export -> Export Canvas`.
+In the bottom corner, select SVG, then press the big export button to save the SVG.
 
 When you're done editing, clean it up:
 
-    npm install
+    yarn
     ./node_modules/.bin/svgo --pretty src/THE-SVG.svg
+    # Manually remove the `<title>` element in the SVG
 
 Verify colours:
 
-* Make sure all colours are in the official palette (see `/Cucumber_Branc_V1.0.pdf`)
+* Make sure all colours are in the official palette (see `/Cucumber_Brand_V1.0.pdf`)
 * The *variable* colours (which we'll generate into red,green,purple,orange,yellow,black) should be `#000`
 
 ## Generate SVGs, PNGs, PDFs and JPGs
+
+If you've added a new logo - you'll also have to add a couple of lines in the `color-svgs`
+target in the `Makefile`.
 
     ./scripts/make
 
