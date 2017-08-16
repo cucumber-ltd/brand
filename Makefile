@@ -51,6 +51,9 @@ color-svgs: $(NOFONT_NOTM_SVGS) $(NOFONT_TM_SVGS) ./scripts/create-color-copies
 
 	./scripts/create-color-copies tmp/tm/cucumber-mark-transparent-pips.svg        images/svg/tm   black,white
 	./scripts/create-color-copies tmp/notm/cucumber-mark-transparent-pips.svg      images/svg/notm black,white
+
+	./scripts/create-color-copies tmp/tm/bdd-kickstart.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/bdd-kickstart.svg      images/svg/notm black,white
 .PHONY: colors
 
 tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/replaceTextWithPath.js .svgo.yml
