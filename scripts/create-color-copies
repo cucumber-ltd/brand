@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 #
-# Build other logos from a common svg source
+# Create a copy of an SVG, replacing the "token" color (`#000`) with
+# a colour from the brand guide.
+#
+# Usage:
+#   create-color-copies SVG DIR COLORLIST
 #
 set -euf -o pipefail
 
