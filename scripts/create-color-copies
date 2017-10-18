@@ -22,6 +22,7 @@ COLORS=(
   "black:#1b1d1e"
   "white:#ffffff"
   "grey:#65696B"
+  "dark-grey:#2f3437"
 )
 
 for color in "${COLORS[@]}" ; do
