@@ -8,7 +8,7 @@ svg=$1
 dir=$2
 format=$3
 
-heights=( 16 32 48 64 128 256 512)
+heights=( 16 32 48 72 96 64 128 256 512)
 for height in "${heights[@]}"
 do
   path=${dir}/$(basename ${dir})-${height}.${format}
