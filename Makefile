@@ -45,6 +45,9 @@ color-svgs: $(NOFONT_NOTM_SVGS) $(NOFONT_TM_SVGS) ./scripts/create-color-copies
 	./scripts/create-color-copies tmp/tm/cucumber-pro.svg        images/svg/tm   black,white
 	./scripts/create-color-copies tmp/notm/cucumber-pro.svg      images/svg/notm black,white
 
+	./scripts/create-color-copies tmp/tm/cucumber-compatible.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/cucumber-compatible.svg      images/svg/notm black,white
+
 	./scripts/create-color-copies tmp/tm/cucumber-ltd.svg        images/svg/tm   black,white
 	./scripts/create-color-copies tmp/notm/cucumber-ltd.svg      images/svg/notm black,white
 
