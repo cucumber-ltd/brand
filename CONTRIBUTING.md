@@ -31,11 +31,22 @@ with the cucumber mark logo.
 Text to the left of the logo should always be `#000` in `/src` images.
 Text to the right of the logo (if any) should always be the same colour as the logo.
 
-## lower case
+## Lower case
 
 Text such as `cucumber` and `cukeup` should *always* be in lower case (No, `CukeUp` is not ok).
 
-### Adding/editing images
+## Derived logos
+
+New logos derived from existing logos should be approved by Cucumber Ltd. Here is
+a non-exhaustive list of guidelines:
+
+* The logo should be usable on white background (use transparent background)
+* The pips in the Cucumber logo should always be white (not transparent, not a different colour, just white)
+* The logo should not be placed inside, outside or very close to, a different shape or logo
+
+Also see the PDF for guidelines about colours, padding, fonts etc.
+
+## Adding/editing images
 
 If you're adding a new logo, start by making a copy of an existing one from `/src`.
 
