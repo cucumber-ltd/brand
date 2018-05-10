@@ -1,8 +1,8 @@
 # Cucumber Brand
 
-![cucumber-black](images/png/tm/cucumber-black/cucumber-black-128.png)
-![cucumber-mark-green](images/png/tm/cucumber-mark-green/cucumber-mark-green-128.png)
-![cucumber-compatible-black](images/png/tm/cucumber-compatible-black/cucumber-compatible-black-128.png)
+![cucumber-black](images/png/notm/cucumber-black/cucumber-black-128.png)
+![cucumber-mark-green](images/png/notm/cucumber-mark-green/cucumber-mark-green-128.png)
+![cucumber-compatible-black](images/png/notm/cucumber-compatible-black/cucumber-compatible-black-128.png)
 
 We're excited that you want to help promote Cucumber. No matter how you contribute as a developer,
 ecosystem member, or enthusiast, your help spreading the word about Cucumber is extremely valuable.
