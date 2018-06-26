@@ -18,6 +18,15 @@ any files under `/images`.
 
 SVG files under `/src` should preferably be edited with [Sketch](https://www.sketchapp.com/).
 
+## Colours and contrast
+
+For each logo there should be a version of it that is suitable to be displayed on a white
+background. This means there *must* be sufficient contrast between the logo colour and white.
+
+This is easy to check - go to http://contrast-ratio.com and paste the colour hex
+code in the right box, for example `#CEF257`. Any value less than 3 is unacceptable.
+Ideally it should be [4.5 or more](https://www.w3.org/TR/WCAG/#contrast-minimum).
+
 ## The ® symbol
 
 All `/src` logos should have a ® symbol (in the `Roboto` font) next to the Cucumber logo.
