@@ -31,8 +31,8 @@ color-svgs: $(NOFONT_NOTM_SVGS) $(NOFONT_TM_SVGS) ./scripts/create-color-copies
 	mkdir -p images/svg/tm
 	mkdir -p images/svg/notm
 
-	./scripts/create-color-copies tmp/tm/cucumber-mark.svg   images/svg/tm    red,green,purple,orange,yellow,black,grey
-	./scripts/create-color-copies tmp/notm/cucumber-mark.svg images/svg/notm  red,green,purple,orange,yellow,black,grey
+	./scripts/create-color-copies tmp/tm/cucumber-mark.svg   images/svg/tm    red,green,pro-purple,orange,yellow,black,grey
+	./scripts/create-color-copies tmp/notm/cucumber-mark.svg images/svg/notm  red,green,pro-purple,orange,yellow,black,grey
 
 	./scripts/create-color-copies tmp/notm/cucumber-mark-transparent-pips.svg images/svg/notm  dark-grey
 
