@@ -59,7 +59,7 @@ Also see the PDF for guidelines about colours, padding, fonts etc.
 
 If you're adding a new logo, start by making a copy of an existing one from `/src`.
 
-When you're done editing, adjust the width of the entire SVG by dragging the left
+When you're done editing in Sketch, adjust the width of the entire SVG by dragging the left
 (and right) edges of the logo text. The padding should be the width of a 'c' (see `/Cucumber_Brand_V1.0.pdf`).
 
 Export it as SVG by selecting the topmost element and choose `File -> Export -> Export Canvas`.

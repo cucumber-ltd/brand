@@ -11,7 +11,7 @@ JPGS             = $(patsubst images/png/%.png,images/jpg/%.jpg,$(PNGS))
 
 pdfs: $(PDF_DIRS)
 
-pngs: $(PNG_DIRS)
+pngs: $(PNG_DIRS) images/png/notm/traffic-light/traffic-light-4200x4800.png
 
 jpgs: $(JPGS)
 
@@ -31,8 +31,8 @@ color-svgs: $(NOFONT_NOTM_SVGS) $(NOFONT_TM_SVGS) ./scripts/create-color-copies
 	mkdir -p images/svg/tm
 	mkdir -p images/svg/notm
 
-	./scripts/create-color-copies tmp/tm/cucumber-mark.svg   images/svg/tm    red,green,pro-purple,orange,yellow,black,grey
-	./scripts/create-color-copies tmp/notm/cucumber-mark.svg images/svg/notm  red,green,pro-purple,orange,yellow,black,grey
+	./scripts/create-color-copies tmp/tm/cucumber-mark.svg   images/svg/tm    red,green,purple,orange,yellow,black,grey
+	./scripts/create-color-copies tmp/notm/cucumber-mark.svg images/svg/notm  red,green,purple,orange,yellow,black,grey
 
 	./scripts/create-color-copies tmp/notm/cucumber-mark-transparent-pips.svg images/svg/notm  dark-grey
 
@@ -48,6 +48,9 @@ color-svgs: $(NOFONT_NOTM_SVGS) $(NOFONT_TM_SVGS) ./scripts/create-color-copies
 	./scripts/create-color-copies tmp/tm/cucumber-compatible.svg        images/svg/tm   black,white
 	./scripts/create-color-copies tmp/notm/cucumber-compatible.svg      images/svg/notm black,white
 
+	./scripts/create-color-copies tmp/tm/cucumber-clinic.svg        images/svg/tm   black,white
+	./scripts/create-color-copies tmp/notm/cucumber-clinic.svg      images/svg/notm black,white
+
 	./scripts/create-color-copies tmp/tm/cucumber-ltd.svg        images/svg/tm   black,white
 	./scripts/create-color-copies tmp/notm/cucumber-ltd.svg      images/svg/notm black,white
 
@@ -62,7 +65,15 @@ color-svgs: $(NOFONT_NOTM_SVGS) $(NOFONT_TM_SVGS) ./scripts/create-color-copies
 
 	./scripts/create-color-copies tmp/tm/cat.svg        images/svg/tm   black,white
 	./scripts/create-color-copies tmp/notm/cat.svg      images/svg/notm black,white
+
 .PHONY: colors
+
+# https://www.threadless.com/profile/artist_dashboard/artist-shop/products/create/
+images/png/notm/traffic-light/traffic-light-4200x4800.png:
+	mkdir -p $$(dirname "$@")
+	rsvg-convert --keep-aspect-ratio --height 4800 --format png --output "$@.tmp" src/traffic-light.svg
+	convert "$@.tmp" -background none -resize 4200x4800 -gravity center -extent 4200x4800 "$@"
+	rm "$@.tmp"
 
 tmp/notm/%.svg: src/%.svg node_modules/svgo/plugins/removeTradeMark.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/removeWhitespaceText.js node_modules/svgo/plugins/replaceTextWithPath.js .svgo.yml
 	mkdir -p $$(dirname "$@")
